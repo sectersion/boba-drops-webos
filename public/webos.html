@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BobaOS</title>
+    </head>
+    <body style="background-image: url(https://www.iclarified.com/images/news/101095/478420/478420.jpg); background-size: cover;">
+        <div id="window-no-name" style="border: 4mm ridge rgba(50, 169, 220, 0.6); width: fit-content; border-radius: 16px; padding: 4px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: darkcyan;">
+            <h3>Hi, I'm Oliver · <code>sectersion</code></h3>
+            <p>Hardware-to-cloud builder. Hardware, Software, &amp; everything in between. Wannabe 100x Engineer.</p>
+            <hr />
+            <h4>Stack</h4>
+            <p><strong>Languages:</strong> TypeScript · Python · C/C++ (embedded) · Rust &amp; Go (learning)</p>
+            <p><strong>Web:</strong> Next.js App Router · React · Hono · TanStack Query · Prisma · Supabase</p>
+            <p><strong>Infra:</strong> Cloudflare Workers · Proxmox · Neon · Docker/Docker Compose · Polymer (my project!)</p>
+            <p><strong>Hardware:</strong> KiCad · LoRa/Meshtastic · RAK WisBlock/Diy Mesh Nodes · PCB design · Ham Radio (join ham club!)</p>
+            <p><strong>Other:</strong> ROCm/llama.cpp local inference · homelab (Supermicro 2U, Dell R210 II) · cybersecurity research</p>
+            <hr />
+        </div>
+
+        <div id="top-bar-thingy" style="border-radius: 8px; display: flex; justify-content: space-between; width: 100%; background-color: rgba(218, 187, 31, 0.597); color: #fff;">
+            <p style="margin-left: 16px;">BobaOS</p>
+            <div id="clock" style="margin-right: 16px; align-self: center;">Loading time...</div>
+
+            <script>
+                function updateClock() {
+                    const now = new Date(); // Gets the current system date and time
+                    
+                    // Format the time to your local timezone format (HH:MM:SS AM/PM)
+                    const timeString = now.toLocaleTimeString(); 
+                    
+                    // Inject the formatted time string into the HTML element
+                    document.getElementById('clock').textContent = timeString;
+                }
+
+                // Run the function immediately so the clock isn't blank on page load
+                updateClock();
+
+                // Update the clock every 1000 milliseconds (1 second)
+                setInterval(updateClock, 1000);
+            </script>
+        </div>
+        
+    </body>
+</html>
