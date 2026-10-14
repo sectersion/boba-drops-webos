@@ -42,10 +42,33 @@
             </script>
         </div>
 
-        <div id="window-no-name-2" style="border: 4mm ridge rgba(50, 169, 220, 0.6); width: fit-content; border-radius: 16px; padding: 4px; position: absolute; top: 30%; right: 10%; transform: translate(-50%, -50%); background-color: darkcyan;">
-            <img src="me.jpg" alt="hi blind people">
-
-        </div>
+        <div id="window-no-name-2" style="
+    border: 4mm ridge rgba(50, 169, 220, 0.6);
+    width: fit-content;
+    border-radius: 16px;
+    padding: 4px;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    background-color: darkcyan;
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
+    max-width: 60vw; /* Limits image width to 60% of viewport w, prevents overflow */
+    overflow: visible; /* Prevents clipping of image content */
+">
+    <img 
+        src="me.jpg" 
+        alt="Hi, blind people!" 
+        style="
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        " 
+        onerror="this.onerror=null;this.src='https://via.placeholder.com/300x400?text=Image+Not+Found';"
+    >
+</div>
         
     </body>
 </html>
